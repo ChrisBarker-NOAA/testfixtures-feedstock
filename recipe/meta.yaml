@@ -1,42 +1,41 @@
-{% set version = "11.0.0" %}
-{% set python_min = "3.11.0" %}
+{% set version = "5.4.0" %}
+
 package:
   name: testfixtures
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/t/testfixtures/testfixtures-{{ version }}.tar.gz
-  sha256: 06dfeb3792e06c4ea7217e14114391f6c7735c36e0a57e6f4641c6ae5d790ee7
+  url: https://pypi.io/packages/source/t/testfixtures/testfixtures-{{ version }}.tar.gz
+  sha256: 338aed9695c432b7c9b8a271dabb521e3e7e2c96b11f7b4e60552f1c8408a8f0
 
 build:
   number: 0
   noarch: python
-  script: {{ PYTHON }} -m pip install . --no-deps -vv
+  script: python -m pip install --no-deps --ignore-installed .
 
 requirements:
-  host:
-    - python {{ python_min }}
+  build:
+    - python
     - pip
-    - hatchling
   run:
-    - python >={{ python_min }}
+    - python
+    - typing-extensions >=4.12
 
 test:
-  requires:
-    - python {{ python_min }}
   imports:
     - testfixtures
+    - testfixtures.tests
+    - testfixtures.tests.test_django
 
 about:
-  home: https://testfixtures.readthedocs.io
-  license: MIT
-  license_file: LICENSE.txt
-  summary: A collection of helpers and mock objects for unit tests and doc tests.
-  doc_url: https://testfixtures.readthedocs.io
-  dev_url: https://github.com/Simplistix/testfixtures
+    home: http://pythonhosted.org/testfixtures/
+    license: MIT
+    license_file: LICENSE.txt
+    summary: 'A collection of helpers and mock objects for unit tests and doc tests.'
+    doc_url: https://testfixtures.readthedocs.io/en/latest/
+    dev_url: https://github.com/Simplistix/testfixtures
 
 extra:
   recipe-maintainers:
     - ChrisBarker-NOAA
     - JamesMakela-NOAA
-    - cjw296

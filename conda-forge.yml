@@ -1,8 +1,6 @@
-conda_forge_output_validation: true
-bot:
-  automerge: true
-github:
-  branch_name: main
-  tooling_branch_name: main
-conda_build:
-  pkg_format: '2'
+travis:
+  secure:
+    BINSTAR_TOKEN: nAjFnQZDpU0NsUbCzdqbIZNZzV3xPn24CiKjxPRNtOdclrMLTUsLghwzPJ8PP0LkhqoRL0x/YnPQCbRgzJlppel5xy+B6WfFRZ2oMYyiVjnuC9U3r3M9FjHvy5mWaM3F8uOu+Ok4GduG47qbG84UhhQ8npvErXUjTGQdV26zh5+0fWhDnfa8VhxAXmbZwaaTNg6Ky2xzOjwlHjWdCY9llD89TFI69Y2rAKd8lwgdkkSQndz+/C8m7thoParFcpe6aFYby0UsLILbJO8nCdRKGsLr2wWBwUWiKWDbHFrma9tjsHmbCZKx9gVxnVIEs3shQIQTi8zGCT4YYhcaIpU1QO/rdzoRzY4mRSl+mmCddID7wD4O7c+NVsGECXWMN+B2CxbNub7CFYjragpXqoSLmjriLnXQiO2os8D7p/F5rbFOXsRVb0TgntOTPIBpXgwl0VgKFFh3MOMvTlWzNVnK2EyEJlVuNuxcTMR0TQ+BWxX/5rCBLBBcPZDPYdLIsYMLL5qnxOHwfh5UEbAcdivkUAaDSqhRdq2zEwWnVjgPJMwxnJBvU96BfDhLmixmOTrDwQZ3Or2q38PsEnm6cxwwwY0YsvxcZWH0tqwaacNCK2/PYyLjOy+wsmaaavtKy8w754ZYkpBvmFxRTNCmHK55lRV/UwF3AG5Oc+KkT7el6x4=
+appveyor:
+  secure:
+    BINSTAR_TOKEN: ipv/06DzgA7pzz2CIAtbPxZSsphDtF+JFyoWRnXkn3O8j7oRe3rzqj3LOoq2DZp4
